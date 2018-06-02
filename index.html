@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset = "UTF-8">
+
+        <!-- LINK CSS FILE -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
+        <title>To Do List</title>
+
+    </head>
+
+    <body>
+
+        <!-- MAIN GRID CONTAINER --> 
+        <div class="grid-container">
+
+            <!-- MAIN PAGE HEADER -->
+            <div class="mainHeader">
+                <h1>Organize</h1>
+                <ul>
+                    <li class="taskNav" id="addNewTask">Add Task</li>
+                    <li class="taskNav" id="viewTask">View Tasks</li>
+                </ul>
+
+
+            </div>
+            <!-- END OF MAIN PAGE HEADER -->
+
+            <!-- MAIN PAGE DIV FOR DISPLAY -->
+            <div class="mainDisplay">
+
+                <div class="introText">
+                    <p class="welcomeText">Welcome to Organize, the to-do list for your busy life. Categorize your tasks and include important details to stay on track.<br>Click Add Task to begin.</p>
+                </div>
+
+                <div class="showBasic">
+                    <label class="inputFields">Task Description</label><br>
+                    <input type="text" id="taskDesc" class="inputText" placeholder="What do you have to do?">
+
+                    <p>What type of task is this?</p>
+                    <!-- BUTTONS TO INDICATE TYPE OF TASK -->
+                    <input type="button" id="normalBtn" class="taskBtns" value="normal"><br>
+                    <input type="button" id="apptBtn" class="taskBtns" value="appointment"><br>
+                    <input type="button" id="shoppingBtn" class="taskBtns" value="shopping"><br>
+                    <input type="button" id="billBtn" class="taskBtns" value="Bill Payment">
+                </div>
+
+
+                <!-- REGULAR TASK DISPLAY DIV-->
+                <div class="addTaskDiv addTaskDisplay-regular">
+                        
+                    <p class='prefixTask'>Your task is</p>
+                    <div id="displayTaskDesc"></div>
+                    <br>
+                    <label class="inputFields">Priority</label><br>
+                    <select id = "dropDownNum" size = "1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>						
+                    </select>
+                    <br><br>
+
+                    <label class="inputFields">Status</label><br>
+                    <select id = "dropDownProgress" size = "1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>						
+                    </select>
+                    <br>
+                    <br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="submitNewTaskBtn finalBtn" id="submitBtn_normal" value="Add New Task">
+                        <input type="button" class="cancelTask finalBtn" id="cancelBtn_normal" value="Cancel">
+                    </div>
+                </div>
+                <!-- END OF REGULAR TASK DISPLAY DIV -->
+
+
+
+                 <!-- APPOINTMENT TASK DISPLAY DIV-->
+                 <div class="addTaskDiv addTaskDisplay-appt">
+
+                    <p class='prefixTask'>Your task is</p>
+                    <div id="displayTaskDesc2"></div>
+
+                    <br>
+
+                    <label class="inputFields">Date</label><br>
+                    <input type="date" id="inputDate" class="inputText">
+                    <br><br>
+
+                    <label class="inputFields">Time</label><br>
+                    <input type="time" id="inputTime" class="inputText"><br>
+                    <br>
+                    <label class="inputFields">Place</label><br>
+                    <input type="text" id="taskPlace" class="inputText" placeholder="Where?">
+                    <br>
+    
+                    <label class="inputFields">Priority</label><br>
+                    <select id="dropDownNum" size="1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>						
+                    </select>
+                    <br><br>
+    
+                    <label class="inputFields">Status</label><br>
+                    <select id="dropDownProgress" size="1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>							
+                    </select>
+                    <br><br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="submitNewTaskBtn finalBtn" id="submitBtn_appt" value="Add">
+                        <input type="button" class="cancelTask finalBtn" id="cancelBtn_appt" value="Cancel">
+                    </div>
+
+                </div>
+                <!-- END OF APPOINT TASK DISPLAY DIV -->
+
+                 <!-- SHOPPING TASK DISPLAY DIV-->
+                 <div class="addTaskDiv addTaskDisplay-shop">
+
+                    <p class='prefixTask'>Your task is</p>
+                    <div id="displayTaskDesc3"></div>
+
+                    <br>
+
+                    <label class="inputFields">Items</label><br>
+                    <input type="text" id="shopItem" class="inputText" placeholder="What do you need to buy?">
+                    <input type="button" id="addShoppingItems" class="inputTextSub" value="Add Item">
+                    <br><br>
+    
+                    <label class="inputFields">Notes</label><br>
+                    <input type="text" id="shopNotes" class="inputText" placeholder="Don't forget the details">
+                    <br><br>
+        
+                    <label class="inputFields">Priority</label><br>
+                    <select id="dropDownNum" size="1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>						
+                    </select>
+                    <br><br>
+        
+                    <label class="inputFields">Task Status</label><br>
+                    <select id="dropDownProgress" size="1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>					
+                    </select>
+                    <br><br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="submitNewTaskBtn finalBtn" id="submitBtn_shopping" value="Add">
+                        <input type="button" class="cancelTask finalBtn" id="cancelBtn_shopping" value="Cancel">
+                    </div>
+                </div>
+                <!-- END OF SHOPPING TASK DISPLAY DIV-->
+
+                <!-- BILL PAYMENT TASK DISPLAY DIV-->
+                <div class="addTaskDiv addTaskDisplay-billPayment">
+
+                    <p class='prefixTask'>Your task is</p>
+                    <div id="displayTaskDesc4"></div>
+                    <br>
+
+                    <label class="inputFields">Due Date</label><br>
+                    <input type="date" id="billDate" class="inputText">
+                    <br><br>
+
+                    <label class="inputFields">Amount</label><br>
+                    <input type="text" id="billAmount" class="inputText" placeholder="$"><br>
+                    <br>
+                    <label class="inputFields">Reoccurence</label><br>
+                    <select id="dropDownBill" size="1"> 
+                        <option value="oneTime">One Time</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="biWeekly">Bi-Weekly</option>
+                        <option value="monthly">Monthly</option>					
+                    </select>
+                    <br>
+                    <br>
+                    <label class="inputFields">Priority</label><br>
+                    <select id="dropDownNum" size="1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>					
+                    </select>
+                    <br><br>
+    
+                    <label class="inputFields">Status</label><br>
+                    <select id="dropDownProgress" size="1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>							
+                    </select>
+                    <br><br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="submitNewTaskBtn finalBtn" id="submitBtn_bill" value="Add">
+                        <input type="button" class="cancelTask finalBtn" id="cancelBtn_bill" value="Cancel">
+                    </div>
+                </div>
+                <!-- END OF BILL PAYMENT TASK DISPLAY DIV -->
+
+                <div class="showAllTasksDisplay">
+                    <p>Total Tasks: <span id="totalLength"></span></p>
+                    <p class="taskHeader" id="normalTaskHeader">Normal Tasks</p>
+
+                    <ul id="displayNormalTasks">
+                        
+                    </ul>
+
+                    <p class="taskHeader" id="apptTaskHeader">Appointments</p>
+                    <ul id="displayApptTasks">
+                  
+                    </ul>
+
+                    <p class="taskHeader" id="shoppingTaskHeader">Shopping</p>
+                    <ul id="displayShoppingTasks">
+                    
+                    </ul>
+
+                    <p class="taskHeader" id="billTaskHeader">Bill Payments</p>
+                    <ul id="displayBillTasks">
+              
+                    </ul>
+
+
+                </div>
+
+                                            <!-- EDITING TASKS -->
+                <!-- EDITING TASK DISPLAY DIVS -->
+                
+                <!-- REGULAR TASK DISPLAY DIV-->
+                <div class="addTaskDiv updateTaskDisplay-regular">
+                        
+                                   
+                    <label class="inputFields">Task Description</label><br>
+                    <input type="text" id="update_taskDesc" class="inputText">
+                    <br>
+                    <br>
+                    <label class="inputFields">Priority</label><br>
+                    <select id = "update_dropDownNum" size = "1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>						
+                    </select>
+                    <br><br>
+                
+                    <label class="inputFields">Status</label><br>
+                    <select id = "dropDownProgress" size = "1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>						
+                    </select>
+                        <br>
+                        <br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="updateTaskBtn finalBtn" id="updateTask_normal" value="Update">
+                        <input type="button" class="deleteTaskBtn finalBtn" id="deleteTask_normal" value="Delete">
+                    </div>
+                </div>
+                <!-- END OF REGULAR TASK DISPLAY DIV -->
+                
+                
+                
+                <!-- APPOINTMENT TASK DISPLAY DIV-->
+                <div class="addTaskDiv updateTaskDisplay-appt">
+                
+                    <label class="inputFields">Task Description</label><br>
+                    <input type="text" id="taskDesc" class="inputText" placeholder="What do you have to do?">
+
+                    <br>
+                
+                    <label class="inputFields">Date</label><br>
+                    <input type="date" id="inputDate" class="inputText">
+                    <br><br>
+                
+                    <label class="inputFields">Time</label><br>
+                    <input type="time" id="inputTime" class="inputText"><br>
+                    <br>
+                    <label class="inputFields">Place</label><br>
+                    <input type="text" id="taskPlace" class="inputText" placeholder="Where?">
+                    <br>
+                    
+                    <label class="inputFields">Priority</label><br>
+                    <select id="dropDownNum" size="1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>						
+                    </select>
+                    <br><br>
+                    
+                    <label class="inputFields">Status</label><br>
+                    <select id="dropDownProgress" size="1"> 
+                        <option value="false">in progress</option>
+                        <option value="true">complete</option>							
+                    </select>
+                    <br><br>
+                    <div class="finalPushBtns">
+                        <input type="button" class="updateTaskBtn finalBtn" id="updateTask_normal" value="Update">
+                        <input type="button" class="deleteTaskBtn finalBtn" id="deleteTask_normal" value="Delete">
+                    </div>
+                
+                </div>
+                <!-- END OF APPOINT TASK DISPLAY DIV -->
+                
+                <!-- SHOPPING TASK DISPLAY DIV-->
+                <div class="addTaskDiv updateTaskDisplay-shop">
+                
+                
+                    <label class="inputFields">Task Description</label><br>
+                    <input type="text" id="taskDesc" class="inputText" placeholder="What do you have to do?">
+
+                    <br>
+                
+                <label class="inputFields">Items</label><br>
+                    <input type="text" id="shopItem" class="inputText" placeholder="What do you need to buy?">
+                    <input type="button" id="addShoppingItems" class="inputTextSub" value="Add Item">
+                <br><br>
+                    
+                <label class="inputFields">Notes</label><br>
+                <input type="text" id="shopNotes" class="inputText" placeholder="Don't forget the details">
+                <br><br>
+                        
+                <label class="inputFields">Priority</label><br>
+                <select id="dropDownNum" size="1"> 
+                    <option value="1">Must Do</option>
+                    <option value="2">Should Do</option>	
+                    <option value="3">Nice To Do</option>						
+                </select>
+                <br><br>
+                        
+                <label class="inputFields">Task Status</label><br>
+                <select id="dropDownProgress" size="1"> 
+                    <option value="false">in progress</option>
+                    <option value="true">complete</option>					
+                </select>
+                <br><br>
+                <div class="finalPushBtns">
+                    <input type="button" class="updateTaskBtn finalBtn" id="updateTask_normal" value="Update">
+                    <input type="button" class="deleteTaskBtn finalBtn" id="deleteTask_normal" value="Delete">
+                </div>
+                </div>
+                <!-- END OF SHOPPING TASK DISPLAY DIV-->
+                
+                <!-- BILL PAYMENT TASK DISPLAY DIV-->
+                <div class="addTaskDiv updateTaskDisplay-billPayment">
+                
+                    <label class="inputFields">Task Description</label><br>
+                    <input type="text" id="taskDesc" class="inputText" placeholder="What do you have to do?">
+
+                <br>
+                
+                <label class="inputFields">Due Date</label><br>
+                <input type="date" id="billDate" class="inputText">
+                <br><br>
+                
+                <label class="inputFields">Amount</label><br>
+                <input type="text" id="billAmount" class="inputText" placeholder="$"><br>
+                <br>
+                <label class="inputFields">Reoccurence</label><br>
+                <select id="dropDownBill" size="1"> 
+                    <option value="oneTime">One Time</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="biWeekly">Bi-Weekly</option>
+                    <option value="monthly">Monthly</option>					
+                </select>
+                <br>
+                <br>
+                <label class="inputFields">Priority</label><br>
+                    <select id="dropDownNum" size="1"> 
+                        <option value="1">Must Do</option>
+                        <option value="2">Should Do</option>	
+                        <option value="3">Nice To Do</option>					
+                    </select>
+                    <br><br>
+                    
+                <label class="inputFields">Status</label><br>
+                <select id="dropDownProgress" size="1"> 
+                    <option value="false">in progress</option>
+                    <option value="true">complete</option>							
+                </select>
+                <br><br>
+                <div class="finalPushBtns">
+                    <input type="button" class="updateTaskBtn finalBtn" id="updateTask_normal" value="Update">
+                    <input type="button" class="deleteTaskBtn finalBtn" id="deleteTask_normal" value="Delete">
+                </div>
+                </div>
+                <!-- END OF BILL PAYMENT TASK DISPLAY DIV -->
+            </div> 
+            <!-- END OF MAIN PAGE FOR DISPLAY -->
+
+        </div> 
+        <!-- END OF MAIN GRID CONTAINER -->
+
+        <!-- LINK JS FILE / JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+    </body>
+
+</html>

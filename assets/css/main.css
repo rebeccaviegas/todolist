@@ -1,0 +1,506 @@
+
+/* LOAD GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+
+
+html{
+    max-width:400px;
+    margin:auto;
+    min-width:400px;
+}
+
+/* MAIN GRID CONTAINER TO HOLD ALL ELEMENTS OF PAGE */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    /* background-color:lavenderblush; */
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding:10px;
+    font-family:"roboto";
+}
+
+/* H1 */
+
+h1{
+    text-align:center;
+    font-family:"Roboto";
+    text-transform:uppercase;
+    letter-spacing:10px;
+}
+
+.introText{
+    display:none;
+}
+
+
+.welcomeText{
+    padding:10px 10px;
+    font-family:"Roboto";
+    text-align: center;
+    color:palevioletred;
+    background-color:rgba(255,255,255,0.5);
+    border-radius:10px 10px;
+    line-height:25px;
+    margin:10px 10px;
+    font-size:15px;
+}
+
+/* MAIN HEADER */
+
+.mainHeader{
+    grid-column: 1/5;
+    background-image: linear-gradient(to bottom, #a1c4fd 0%, #c2e9fb 100%);
+    height:120px;
+    border-radius:10px 10px;
+}
+
+.mainHeader ul{
+    text-align: center;
+    padding:0;
+}
+
+.mainHeader ul li{
+    text-transform:uppercase;
+    color:white;
+    list-style-type: none;
+    font-family:"Roboto";
+    cursor: pointer;
+    display:inline-block;
+    margin:0px 20px;
+}
+
+.mainHeader ul li:hover{
+    color:#4facfe;
+}
+
+.taskNav{
+    display:none;
+}
+
+/* MAIN AREA OF DISPLAY */
+
+.mainDisplay{
+    grid-column: 1/5;
+    min-height:600px;
+    z-index:99;
+    /* padding:20px 20px; */
+    text-align: center;
+}
+
+/* SHOW BASIC TASK ENTRY TO BEGIN  */
+
+.showBasic{
+    display:none;
+}
+
+
+/* INPUT TEXT FIELDS  */
+
+.inputFields{
+    text-transform:uppercase;
+    font-family:"Roboto";
+    text-align:center;
+}
+
+.inputText{
+    width:300px;
+    border-radius:10px 10px;
+    border:none;
+    height:20px;
+    color:#4facfe;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#billAmount{
+    width:120px!important;
+
+}
+
+.inputTextSub{
+    width:120px;
+    border-radius:10px 10px;
+    border:none;
+    height:20px;
+    color:#fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color:palevioletred;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type="time"]{
+    width:120px;
+}
+
+input[type="date"]{
+    width:130px;
+}
+
+/* TASK BUTTONS ON INITIAL LOAD  */
+
+.taskBtns{
+    display:block;
+    margin:auto;
+    width:150px;
+    height:25px;
+    font-size:15px;
+    text-transform:uppercase;
+    font-family:"Roboto";
+    border-radius:10px 10px;
+    border:none;
+    cursor: pointer;
+}
+
+.finalPushBtns{
+    justify-content: center;
+    display:flex;
+}
+
+.column{
+    justify-content: center;
+    display:flex;
+}
+
+.finalBtn{
+    display:flex;
+    margin:5px;
+    width:150px;
+    height:25px;
+    font-size:15px;
+    text-transform:uppercase;
+    font-family:"Roboto";
+    border-radius:10px 10px;
+    border:none;
+    cursor: pointer;
+    background-color:#4facfe;
+    color:white;
+    border:1px solid #4facfe;
+    justify-content: center;
+}
+
+.finalBtn:hover{
+    background-color:white;
+    color:#4facfe;
+    border:1px solid #fff;
+
+}
+
+#normalBtn{
+    background-color:palevioletred;
+    color:white;
+}
+
+#normalBtn:hover{
+    background-color:white;
+    color:palevioletred;
+}
+
+#apptBtn{
+    background-color:#72afd3;
+    color:white;
+}
+
+#apptBtn:hover{
+    background-color:#fff;
+    color:#72afd3;
+}
+
+#shoppingBtn{
+    background-color:#9795f0;
+    color:white;
+}
+
+#shoppingBtn:hover{
+    background-color:#fff;
+    color:#9795f0;
+}
+
+#billBtn{
+    background-color:#83b883;
+    color:white;
+}
+
+#billBtn:hover{
+    background-color:#fff;
+    color:#83b883;
+
+}
+
+/* DIV TO DISPALY THE USER's TASK */
+
+#displayTaskDesc{
+    text-transform: uppercase;
+    font-family:"Boogaloo";
+    letter-spacing:2px;
+    color:black;
+    text-shadow: 1px 1px white;
+    font-size:25px;
+}
+
+#displayTaskDesc2{
+    text-transform: uppercase;
+    font-family:"Boogaloo";
+    letter-spacing:2px;
+    color:black;
+    text-shadow: 1px 1px white;
+    font-size:25px;
+}
+
+#displayTaskDesc3{
+    text-transform: uppercase;
+    font-family:"Boogaloo";
+    letter-spacing:2px;
+    color:black;
+    text-shadow: 1px 1px white;
+    font-size:25px;
+}
+
+#displayTaskDesc4{
+    text-transform: uppercase;
+    font-family:"Boogaloo";
+    letter-spacing:2px;
+    color:black;
+    text-shadow: 1px 1px white;
+    font-size:25px;
+}
+
+.showAllTasksDisplay{
+    display:none;
+}
+
+
+.prefixTask{
+    text-transform: uppercase;
+    font-size:10px;
+    color:black;
+}
+
+/* NORMAL TASK INPUT FIELDS */
+
+.addTaskDisplay-regular{
+    /* background-color:salmon; */
+    display:none;
+}
+
+/* APPOINTMENT TASK DETAILS  */
+
+.addTaskDisplay-appt{
+    /* background-color:salmon; */
+    display:none;
+}
+
+/* SHOPPING TASK  */
+
+.addTaskDisplay-shop{
+    display:none;
+    /* background-color:steelblue; */
+}
+
+/* WOROUT TASK  */
+
+.addTaskDisplay-billPayment{
+    display:none;
+}
+
+.taskHeader{
+    display:block;
+    margin:auto;
+    width:100%;
+    height:25px;
+    /* font-size:15px; */
+    text-transform:uppercase;
+    font-family:"Roboto";
+    border-radius:10px 10px;
+    border:none;
+}
+
+#normalTaskHeader{
+    background-color:palevioletred;
+    color:white;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+#apptTaskHeader{
+    background-color:#72afd3;
+    color:white;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+#shoppingTaskHeader{
+    background-color:#9795f0;
+    color:white;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+#billTaskHeader{
+    background-color:#83b883;
+    color:white;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+
+#displayNormalTasks{
+    width:100%;
+}
+
+#displayNormalTasks ul{
+    margin:5px;
+}
+
+
+#displayNormalTasks ul li{
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    padding:10px;
+    background-color:pink;
+    border-radius:10px 10px;
+    cursor: pointer;
+}
+
+#displayApptTasks{
+    width:100%;
+}
+
+#displayApptTasks tr{
+    margin:5px;
+}
+
+
+#displayApptTasks tr td{
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    padding:10px;
+    background-color:lavender;
+    border-radius:10px 10px;
+    cursor: pointer;
+}
+
+#displayShoppingTasks{
+    width:100%;
+}
+
+#displayShoppingTasks tr{
+    margin:5px;
+}
+
+
+#displayShoppingTasks tr td{
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    padding:10px;
+    background-color:powderblue;
+    border-radius:10px 10px;
+    cursor: pointer;
+}
+
+#displayBillTasks{
+    width:100%;
+}
+
+#displayBillTasks tr{
+    margin:5px;
+}
+
+
+#displayBillTasks tr td{
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    padding:10px;
+    background-color:sandybrown;
+    border-radius:10px 10px;
+    cursor: pointer;
+}
+
+.reviewTaskBtns{
+    display:none;
+}
+
+ul{
+    list-style-type: none;
+    padding-left:20px;
+}
+
+#displayNormalTasks li{
+    background-color:palevioletred;
+    font-size: 12px;
+    width:80%;
+    text-align:center;
+    font-weight: normal;
+    padding:10px;
+    border-radius:10px 10px;
+    cursor: pointer;
+    margin:10px;
+
+}
+
+#displayApptTasks li{
+    background-color:#72afd3;
+    font-size: 12px;
+    width:80%;
+    text-align:center;
+    font-weight: normal;
+    padding:10px;
+    border-radius:10px 10px;
+    cursor: pointer;
+    margin:10px;
+
+}
+
+#displayShoppingTasks li{
+    background-color:#9795f0;
+    font-size: 12px;
+    width:80%;
+    text-align:center;
+    font-weight: normal;
+    padding:10px;
+    border-radius:10px 10px;
+    cursor: pointer;
+    margin:10px;
+}
+
+
+#displayBillTasks li{
+    background-color:#83b883;
+    font-size: 12px;
+    width:80%;
+    text-align:center;
+    font-weight: normal;
+    padding:10px;
+    border-radius:10px 10px;
+    cursor: pointer;
+    margin:10px;
+}
+
+
+/* EDITING TASKS SECTION */
+
+.updateTaskDisplay-regular{
+    display:none;
+}
+
+.updateTaskDisplay-appt{
+    display:none;
+}
+
+.updateTaskDisplay-shop{
+    display:none;
+}
+
+.updateTaskDisplay-billPayment{
+    display:none;
+}
